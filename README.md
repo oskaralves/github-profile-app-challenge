@@ -85,3 +85,7 @@ The project follows the design specifications provided in the [Figma file](https
 - **Error Handling**: Managed API errors and edge cases gracefully.
 - **Responsiveness**: Fully responsive and styled with Tailwind CSS.
 - **Best Practices**: Followed clean code principles and linting standards.
+
+## 📜 License
+
+This project is licensed under the MIT License. See the [MIT](https://github.com/oskaralves/github-profile-app-challenge?tab=MIT-1-ov-file) file for details.
