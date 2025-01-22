@@ -1,36 +1,87 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# GitHub Profile App Challenge
 
-## Getting Started
+This is a solution for the **GitHub Profile App Challenge**, which aims to provide a user interface for searching and displaying GitHub user profiles using the GitHub REST API. This application enables users to retrieve and view essential details such as profile information and repositories for a given username.
 
-First, run the development server:
+## 🎯 Features
+
+![demo](docs/GithubProfileApp.gif)
+
+- **Profile Details**: Displays the user's profile picture, name, username, bio, and location.
+- **Top Repositories**: Lists the top 5 repositories for the user, sorted by the number of stars in descending order.
+- **Pixel-Perfect Design**: Follows the design specifications provided in the Figma file.
+- **Dynamic Routing**: Allows users to directly access profiles through URLs with query parameters, e.g., `/?username=oskaralves`.
+- **[EXTRA] Search Functionality**: Users can search for a GitHub profile by entering a username in an intuitive search bar with a button.
+
+## 🚀 Tech Stack
+
+- **Framework**: [Next.js 15](https://nextjs.org/) with the latest React 19.
+- **State Management**: [React Query](https://tanstack.com/query/v5) for efficient and cache-friendly API data fetching.
+- **HTTP Client**: [Axios](https://axios-http.com/) for API requests.
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/) for responsive and modern styling.
+- **Icons**: [Lucide React](https://lucide.dev/) for crisp, scalable icons.
+
+## 📦 Installation
+
+Clone this repository and navigate to the project folder:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/oskaralves/github-profile-app-challenge.git
+cd github-profile-app-challenge
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Install the dependencies using **Yarn**:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+yarn install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🛠️ Running the Application
 
-## Learn More
+To start the development server:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+yarn dev
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Navigate to `http://localhost:3000` to view the application.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+To build the application for production:
 
-## Deploy on Vercel
+```bash
+yarn build
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Start the production server:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+yarn start
+```
+
+## ⚙️ Usage
+
+1. Enter a GitHub username in the search input and click the **Search** button.
+2. The application fetches and displays the following information for the username:
+   - Profile picture
+   - Full name
+   - Username
+   - Bio
+   - Top 5 repositories by star count
+3. Alternatively, you can access a profile directly via the URL by appending `?username=<github-username>`.
+
+## 🌟 Highlights
+
+- **Input with Search Button**: Provides a user-friendly way to input and fetch profiles, enhancing the default URL-based navigation.
+- **Error Handling**: Displays meaningful messages for scenarios like "No profile found" or "No repositories found."
+- **Performance Optimizations**: Leveraged React Query for API request caching and retries, ensuring optimal performance and responsiveness.
+
+## 🧑‍🎨 Design
+
+The project follows the design specifications provided in the [Figma file](https://www.figma.com/file/Z4Ys41h6WcE49nCBebKT3N/Programming-Challenge---Frontend). The UI is implemented with a focus on being pixel-perfect.
+
+## 🛡️ Evaluation Criteria
+
+- **Architectural Decisions**: Designed with a scalable structure using Next.js 15 and React 19.
+- **Project Structure**: Organized code and folder hierarchy for maintainability.
+- **Error Handling**: Managed API errors and edge cases gracefully.
+- **Responsiveness**: Fully responsive and styled with Tailwind CSS.
+- **Best Practices**: Followed clean code principles and linting standards.
